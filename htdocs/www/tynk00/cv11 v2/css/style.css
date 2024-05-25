@@ -1,0 +1,22 @@
+.fixed-height {
+  height: 200px;
+  object-fit: cover;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+.placeholderImage {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('https://coenterprises.com.au/wp-content/uploads/2018/02/male-placeholder-image.jpeg');
+}

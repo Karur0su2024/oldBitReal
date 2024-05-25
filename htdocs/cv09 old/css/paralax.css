@@ -1,0 +1,56 @@
+.parallax {
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  height: auto;
+  overflow: hidden;
+}
+
+.parallax-inner {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+.parallax::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.parallax-inner::before {
+  content: "";
+  background: url('../img/bg.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  transform: translate3d(0, 0, 0.4px);
+  z-index: -1;
+}
+
+.parallax-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+  transition: all 0.3s ease-out;
+  transform: translate3d(0, 0, 0.3px) scale(1.2);
+}
+
+.parallax-inner:hover::after {
+  transform: translate3d(0, 0, 0.3px) scale(1.1);
+}
